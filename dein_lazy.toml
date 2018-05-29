@@ -1,0 +1,12 @@
+#colorscheme
+[[plugins]]
+repo = 'tomasr/molokai'
+
+#[[plugins]]
+#repo = 'sjl/badwolf'
+#hook_add = '''
+#	colorscheme badwolf
+#'''
+
+[[plugins]]
+repo = 'challenger-deep-theme/vim'

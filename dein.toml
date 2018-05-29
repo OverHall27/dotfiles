@@ -1,0 +1,132 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['Shougo/context_filetype.vim']
+
+[[plugins]]
+repo ='Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+repo ='Shougo/neocomplete.vim'
+# Vim起動時にneocompleteを有効にする
+hook_add = 'let g:neocomplete#enable_at_startup = 1'
+# smartcase有効化. 大文字が入力されるまで大文字小文字の区別を無視する
+hook_add = 'let g:neocomplete#enable_smart_case = 1'
+# 3文字以上の単語に対して補完を有効にする
+hook_add = 'let g:neocomplete#min_keyword_length = 3'
+# 区切り文字まで補完する
+hook_add = 'let g:neocomplete#enable_auto_delimiter = 1'
+# 1文字目の入力から補完のポップアップを表示
+hook_add = 'let g:neocomplete#auto_completion_start_length = 1'
+#preview window 閉じない
+hook_add = 'let g:neocomplete#enable_auto_close_preview = 0'
+
+[[plugins]]
+repo ='Shougo/neosnippet'
+
+[[plugins]]
+repo ='Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo ='tpope/vim-endwise'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+#hook_add = '''
+# if !exists('g:context_filetype#filetypes')
+# let g:context_filetype#filetypes = {}
+# endif
+# let g:context_filetype#filetype['toml'] = [
+# 	\ {'filetype':'vim', 'start':'^\s*hook_\(add\|source\|post_source\)\s*=\s*'.'""'.'"', 'end':'""'.'"'},
+# 	\ {'filetype':'vim', 'start':'^\s*hook_\(add\|source\|post_source\)\s*=\s*'."''"."'", 'end':"''"."'"},
+# 	\]
+#'''
+
+[[plugins]]
+repo ='ujihisa/neco-look'
+
+[[plugins]]
+repo ='osyo-manga/vim-marching'
+
+[[plugins]]#shift v で範囲選択 ctrl -(ハイフン）2回でコメントアウト
+repo ='tomtom/tcomment_vim'
+
+[[plugins]]#横にdirtree表示
+repo ='scrooloose/nerdtree'
+hook_source = 'let g:nerdtree_tabs_open_on_console_startup = 0'
+
+#c/c++
+[[plugins]]
+repo ='justinmk/vim-syntax-extra'
+
+[[plugins]]
+repo ='octol/vim-cpp-enhanced-highlight'
+
+hook_add = 'let g:cpp_class_scope_highlight = 1'
+hook_add = 'let g:cpp_member_variable_highlight = 1'
+hook_add = 'let g:cpp_class_decl_heighligjt = 1'
+
+#js系
+[[plugins]] #js-plugin
+repo ='pangloss/vim-javascript'
+
+[[plugins]] #vue-js系
+repo ='othree/yajs.vim'
+
+[[plugins]] #js-syntax
+repo ='jelera/vim-javascript-syntax'
+
+[[plugins]] #wasureta
+repo ='posva/vim-vue'
+
+#git diff
+[[plugins]] #git変更行教えてくれる
+repo ='airblade/vim-gitgutter'
+
+#toml
+[[plugins]]
+#toml-syntax
+repo ='cespare/vim-toml'
+
+[[plugins]]
+repos = 'maralla/vim-toml-enhance'
+depends = ['cespare/vim-toml']
+
+#markdown系
+#markdown-syntax
+[[plugins]]
+repo ='plasticboy/vim-markdown'
+
+#markdown-preview
+[[plugins]]
+repo ='kannokanno/previm'
+
+#markdown-browser
+[[plugins]]
+repo ='tyru/open-browser.vim'
+hook_add = 'let g:vim_markdown_math = 1'
+hook_add = '''
+au PrevimSettings BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+'''
+
+#tex
+[[plugins]]
+repo ='lervag/vimtex'
+
+#ruby
+[[plugins]]
+repo ='vim-ruby/vim-ruby'
+[[plugins]]
+repo ='bbatsov/rubocop'
+
+##colorscheme
+[[plugins]]
+repo = 'sjl/badwolf'
+hook_add = '''
+	colorscheme badwolf
+'''
