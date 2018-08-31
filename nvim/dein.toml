@@ -57,9 +57,11 @@ repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]#横にdirtree表示
 repo ='scrooloose/nerdtree'
+hook_add = 'let g:nerdtree_tabs_open_console_startup = 0'
 
 #C/C++
 [[plugins]]
+repo = 'justinmk/vim-syntax-extra'
 
 [[plugins]]
 repo ='octol/vim-cpp-enhanced-highlight'
@@ -97,7 +99,7 @@ repo ='airblade/vim-gitgutter'
 repo ='cespare/vim-toml'
 
 #yaml
-#[[plugins]]
+[[plugins]]
 repo = 'chase/vim-ansible-yaml'
 
 [[plugins]]
@@ -142,6 +144,9 @@ repo ='bbatsov/rubocop'
 repo = 'sjl/badwolf'
 hook_add = '''
  au MyAutoCmd VimEnter * nested colorscheme badwolf
+'''
+hook_add = '''
+ colorscheme badwolf
 '''
 [[plugins]]
 repo = 'tomasr/molokai'

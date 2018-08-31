@@ -64,7 +64,7 @@ autocmd!
 augroup END
 
 augroup NERDTREE
- autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree
 augroup END
 
 "plugin dir
@@ -92,6 +92,7 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-if dein#check_install()
+if has('vim_startinf') && dein#check_install()
 	call dein#install()
 endif
+syntax on
