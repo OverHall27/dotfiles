@@ -6,6 +6,9 @@ repo = 'osyo-manga/vim-precious'
 depends = ['Shougo/context_filetype.vim']
 
 [[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
 repo ='Shougo/neomru.vim'
 
 [[plugins]]
@@ -34,18 +37,11 @@ repo ='Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo ='tpope/vim-endwise'
+on_i = 1
+on_ft = ['ruby']
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
-#hook_add = '''
-# if !exists('g:context_filetype#filetypes')
-# let g:context_filetype#filetypes = {}
-# endif
-# let g:context_filetype#filetype['toml'] = [
-# 	\ {'filetype':'vim', 'start':'^\s*hook_\(add\|source\|post_source\)\s*=\s*'.'""'.'"', 'end':'""'.'"'},
-# 	\ {'filetype':'vim', 'start':'^\s*hook_\(add\|source\|post_source\)\s*=\s*'."''"."'", 'end':"''"."'"},
-# 	\]
-#'''
 
 [[plugins]]
 repo ='ujihisa/neco-look'
@@ -56,13 +52,14 @@ repo ='osyo-manga/vim-marching'
 [[plugins]]#shift v で範囲選択 ctrl -(ハイフン）2回でコメントアウト
 repo ='tomtom/tcomment_vim'
 
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
 [[plugins]]#横にdirtree表示
 repo ='scrooloose/nerdtree'
-hook_source = 'let g:nerdtree_tabs_open_on_console_startup = 0'
 
-#c/c++
+#C/C++
 [[plugins]]
-repo ='justinmk/vim-syntax-extra'
 
 [[plugins]]
 repo ='octol/vim-cpp-enhanced-highlight'
@@ -70,6 +67,12 @@ repo ='octol/vim-cpp-enhanced-highlight'
 hook_add = 'let g:cpp_class_scope_highlight = 1'
 hook_add = 'let g:cpp_member_variable_highlight = 1'
 hook_add = 'let g:cpp_class_decl_heighligjt = 1'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
 
 #js系
 [[plugins]] #js-plugin
@@ -92,6 +95,10 @@ repo ='airblade/vim-gitgutter'
 [[plugins]]
 #toml-syntax
 repo ='cespare/vim-toml'
+
+#yaml
+#[[plugins]]
+repo = 'chase/vim-ansible-yaml'
 
 [[plugins]]
 repos = 'maralla/vim-toml-enhance'
@@ -120,7 +127,13 @@ repo ='lervag/vimtex'
 
 #ruby
 [[plugins]]
+repo = 'Shougo/deoplete-rct'
+on_ft = ['ruby']
+
+
+[[plugins]]
 repo ='vim-ruby/vim-ruby'
+
 [[plugins]]
 repo ='bbatsov/rubocop'
 
@@ -128,5 +141,10 @@ repo ='bbatsov/rubocop'
 [[plugins]]
 repo = 'sjl/badwolf'
 hook_add = '''
-	colorscheme badwolf
+ au MyAutoCmd VimEnter * nested colorscheme badwolf
 '''
+[[plugins]]
+repo = 'tomasr/molokai'
+#hook_add = '''
+#colorscheme molokai
+#'''

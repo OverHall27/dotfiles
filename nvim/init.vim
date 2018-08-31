@@ -37,6 +37,20 @@ set showmatch matchtime=1
 set laststatus=2
 set wildmode=list:longest
 
+"command shortcut
+inoremap <silent> jj <ESC>
+inoremap <silent> kk <ESC>
+
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sw <C-w>w
+
+filetype indent on
+"tree setting"
+let g:netrw_liststyle = 3
+
 if !&compatible
 	set nocompatible
 endif
@@ -49,7 +63,13 @@ augroup PrevimSettings
 autocmd!
 augroup END
 
+augroup NERDTREE
+ autocmd vimenter * NERDTree
+augroup END
+
+"plugin dir
 let s:dein_dir = expand('~/.cache/dein')
+"dein-self dir
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_repo_dir)
@@ -57,13 +77,13 @@ if !isdirectory(s:dein_repo_dir)
 endif
 execute 'set runtimepath+=' . s:dein_repo_dir
 
-
 "設定開始
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
 	let s:toml = '~/.config/nvim/dein.toml'
 	let s:lazy_toml = '~/.config/nvim/dein_lazy.toml'
+
 	call dein#load_toml(s:toml, {'lazy': 0})
 	call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
@@ -72,8 +92,6 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-if has('vim_starting') && dein#check_install()
+if dein#check_install()
 	call dein#install()
 endif
-
-syntax on
