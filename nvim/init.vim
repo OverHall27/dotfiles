@@ -92,7 +92,7 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-if has('vim_startinf') && dein#check_install()
+if dein#check_install()
 	call dein#install()
 endif
 syntax on
