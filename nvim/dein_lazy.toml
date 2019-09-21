@@ -4,30 +4,38 @@ repo = 'Shougo/unite.vim'
 [[plugins]]
 repo ='Shougo/neomru.vim'
 
+# snipett機能 設定ファイルに必要
+[[plugins]]
+repo ='Shougo/neosnippet'
+
+# snipett強化
+[[plugins]]
+repo ='Shougo/neosnippet-snippets'
+
 [[plugins]]
 repo ='Shougo/neocomplete.vim'
 # Vim起動時にneocompleteを有効にする
-hook_add = 'let g:neocomplete#enable_at_startup = 1'
+hook_source = 'let g:neocomplete#enable_at_startup = 1'
 # smartcase有効化. 大文字が入力されるまで大文字小文字の区別を無視する
-hook_add = 'let g:neocomplete#enable_smart_case = 1'
+hook_source = 'let g:neocomplete#enable_smart_case = 1'
 # 3文字以上の単語に対して補完を有効にする
-hook_add = 'let g:neocomplete#min_keyword_length = 3'
+hook_source = 'let g:neocomplete#min_keyword_length = 3'
 # 区切り文字まで補完する
-hook_add = 'let g:neocomplete#enable_auto_delimiter = 1'
+hook_source = 'let g:neocomplete#enable_auto_delimiter = 1'
 # 1文字目の入力から補完のポップアップを表示
-hook_add = 'let g:neocomplete#auto_completion_start_length = 1'
+hook_source = 'let g:neocomplete#auto_completion_start_length = 1'
 #preview window 閉じない
-hook_add = 'let g:neocomplete#enable_auto_close_preview = 0'
+hook_source = 'let g:neocomplete#enable_auto_close_preview = 0'
 
 ##colorscheme
-[[plugins]]
-repo = 'sjl/badwolf'
-hook_source = '''
- au MyAutoCmd VimEnter * nested colorscheme badwolf
-'''
+#[[plugins]]
+#repo = 'sjl/badwolf'
+#hook_source = '''
+# au MyAutoCmd VimEnter * nested colorscheme badwolf
+#'''
 
 [[plugins]]
-repo = 'tomasr/molokai'
+#repo = 'tomasr/molokai'
 #hook_source = '''
 # au MyAutoCmd VimEnter * nested colorscheme molokai
 #'''
