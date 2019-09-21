@@ -34,6 +34,7 @@ if !isdirectory(s:dein_repo_dir)
 endif
 " runtimepath設定
 execute 'set runtimepath+=' . s:dein_repo_dir
+	"set runtimepath+=~/.
 
 call s:source_rc('dein.rc.vim')
 call s:source_rc('options.rc.vim')
@@ -41,4 +42,4 @@ call s:source_rc('filetype.rc.vim')
 
 " プラグインに対する設定反映
 filetype indent on
-syntax enable
+syntax on

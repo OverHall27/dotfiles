@@ -27,11 +27,12 @@ set wildmode=list:longest
 set virtualedit+=block
 " 前行のインデント引き継ぎ
 set autoindent
-" defaultタブ間隔
+" タブ幅
 set tabstop=2
+" 自動インデント幅
 set shiftwidth=2
 " インデント自動調整
-"set smartindent
+set smartindent
 " error時のbell不要
 set noerrorbells
 

@@ -10,8 +10,7 @@ hook_source = 'let g:neocomplete#min_keyword_length = 3'
 # 区切り文字まで補完する
 hook_source = 'let g:neocomplete#enable_auto_delimiter = 1'
 # 1文字目の入力から補完のポップアップを表示
-hook_source = 'let g:neocomplete#auto_completion_start_length = 1'
-#preview window 閉じない
+hook_source = 'let g:neocomplete#auto_completion_start_length = 1' #preview window 閉じない
 hook_source = 'let g:neocomplete#enable_auto_close_preview = 0'
 
 #============#
@@ -44,13 +43,25 @@ on_ft = ['md']
 repo ='cespare/vim-toml'
 on_ft = ['toml']
 
-[[plugins]]
-repos = 'maralla/vim-toml-enhance'
-depends = ['cespare/vim-toml']
+#[[plugins]]
+#repos = 'maralla/vim-toml-enhance'
+#depends = ['cespare/vim-toml']
 
 # yaml syntax
 [[plugins]]
 repo = 'chase/vim-ansible-yaml'
+
+#============#
+# 補完強化系
+#============#
+
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+hook_source = 'let g:deoplete#enable_at_startup = 1'
+
+# 英語補完
+[[plugins]]
+repo ='ujihisa/neco-look'
 
 #============#
 # 非同期処理
@@ -58,3 +69,14 @@ repo = 'chase/vim-ansible-yaml'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
+
+#==========#
+# 便利機能
+#==========#
+#shift v で範囲選択 ctrl -(ハイフン）2回でコメントアウト
+[[plugins]]
+repo ='tomtom/tcomment_vim'
+
+# コメントアウト系
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'

@@ -71,12 +71,9 @@ repo ='plasticboy/vim-markdown'
 repo ='kannokanno/previm'
 
 # markdown browser
-#[[plugins]]
-#repo ='tyru/open-browser.vim'
-#hook_add = 'let g:vim_markdown_math = 1'
-#hook_add = '''
-#au PrevimSettings BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-#'''
+[[plugins]]
+repo ='tyru/open-browser.vim'
+hook_add = 'let g:vim_markdown_math = 1'
 
 # tex
 [[plugins]]
