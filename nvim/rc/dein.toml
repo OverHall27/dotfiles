@@ -1,0 +1,99 @@
+#===================#
+# Plugin for Plugin
+#===================#
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+#==========#
+# FileType
+#==========#
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['Shougo/context_filetype.vim']
+
+#=============================#
+# ColorSchema - PowerlineShell( (hybird, hook)->lighttiger2505さん引用 )
+#=============================#
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+    set background=dark
+'''
+
+[[plugins]]
+repo = 'sjl/badwolf'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'michalbachowski/vim-wombat256mod'
+hook_add = '''
+   au MyAutoCmd VimEnter * nested colorscheme wombat256mod
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['/vim-airline-themes']
+hook_add = '''
+let g:airline_powerline_fonts = 1
+    let g:airline_theme = 'badwolf'
+    let g:airline#extensions#virtualenv#enabled = 1
+'''
+
+#=============================#
+# Git関連設定(lighttiger2505さん引用)
+#=============================#
+# nerdirtree表示
+[[plugins]]
+repo ='scrooloose/nerdtree'
+hook_add = 'let g:nerdtree_tabs_open_console_startup = 0'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+    nnoremap [figitive] <Nop>
+    nnoremap <Leader>g [figitive]
+    nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
+    nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
+    nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
+'''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['vim-fugitive']
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+#==========#
+# 便利機能
+#==========#
+#shift v で範囲選択 ctrl -(ハイフン）2回でコメントアウト
+[[plugins]]
+repo ='tomtom/tcomment_vim'
+
+# コメントアウト系
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+#============#
+# 補完強化系
+#============#
+
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+hook_source = 'let g:deoplete#enable_at_startup = 1'
+
+# 英語補完
+[[plugins]]
+repo ='ujihisa/neco-look'

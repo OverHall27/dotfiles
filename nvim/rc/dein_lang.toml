@@ -1,0 +1,83 @@
+#=========#
+# C / C++ 
+#=========#
+# syntax
+[[plugins]]
+repo = 'justinmk/vim-syntax-extra'
+
+# highlight設定
+[[plugins]]
+repo ='octol/vim-cpp-enhanced-highlight'
+hook_add = 'let g:cpp_class_scope_highlight = 1'
+hook_add = 'let g:cpp_member_variable_highlight = 1'
+hook_add = 'let g:cpp_class_decl_heighligjt = 1'
+
+# 使いやすく
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+# コード補完
+[[plugins]]
+repo ='osyo-manga/vim-marching'
+
+# lint
+[[plugins]]
+repo = 'w0rp/ale'
+hook_source = 'let g:ale_lint_on_text_changed = "never" '
+hook_source = 'let g:ale_lint_on_enter = 0'
+
+#======#
+# ruby
+#======#
+# ruby syntax
+[[plugins]]
+repo ='vim-ruby/vim-ruby'
+
+# ruby lint
+[[plugins]]
+repo ='bbatsov/rubocop'
+
+[[plugins]]
+repo ='tpope/vim-endwise'
+on_i = 1
+on_ft = ['ruby']
+
+#============#
+# javescript 
+#============#
+[[plugins]]
+repo ='pangloss/vim-javascript'
+
+# vue-js
+[[plugins]]
+repo ='othree/yajs.vim'
+
+# js syntax
+[[plugins]]
+repo ='jelera/vim-javascript-syntax'
+
+[[plugins]] 
+repo ='posva/vim-vue'
+
+#=================#
+# Markdown, Tex
+#=================#
+# syntax
+[[plugins]]
+repo ='plasticboy/vim-markdown'
+
+# previewできる
+[[plugins]]
+repo ='kannokanno/previm'
+
+# markdown browser
+#[[plugins]]
+#repo ='tyru/open-browser.vim'
+#hook_add = 'let g:vim_markdown_math = 1'
+#hook_add = '''
+#au PrevimSettings BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+#'''
+
+# tex
+[[plugins]]
+repo ='lervag/vimtex'

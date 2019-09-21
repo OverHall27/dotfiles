@@ -1,19 +1,6 @@
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo ='Shougo/neomru.vim'
-
-# snipett機能 設定ファイルに必要
-[[plugins]]
-repo ='Shougo/neosnippet'
-
-# snipett強化
-[[plugins]]
-repo ='Shougo/neosnippet-snippets'
-
-[[plugins]]
 repo ='Shougo/neocomplete.vim'
+on_i = 1
 # Vim起動時にneocompleteを有効にする
 hook_source = 'let g:neocomplete#enable_at_startup = 1'
 # smartcase有効化. 大文字が入力されるまで大文字小文字の区別を無視する
@@ -27,15 +14,47 @@ hook_source = 'let g:neocomplete#auto_completion_start_length = 1'
 #preview window 閉じない
 hook_source = 'let g:neocomplete#enable_auto_close_preview = 0'
 
-##colorscheme
-#[[plugins]]
-#repo = 'sjl/badwolf'
-#hook_source = '''
-# au MyAutoCmd VimEnter * nested colorscheme badwolf
-#'''
+#============#
+# snippet
+#============#
+[[plugins]]
+repo ='Shougo/neosnippet'
+depends = ['neosnippet-snippets']
+
+# snipett強化
+[[plugins]]
+repo ='Shougo/neosnippet-snippets'
 
 [[plugins]]
-#repo = 'tomasr/molokai'
-#hook_source = '''
-# au MyAutoCmd VimEnter * nested colorscheme molokai
-#'''
+repo = 'Shougo/unite.vim'
+depends = ['neomru.vim']
+
+[[plugins]]
+repo ='Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = ['md']
+
+#=================#
+# 設定ファイル関連
+#=================#
+#toml syntax
+[[plugins]]
+repo ='cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repos = 'maralla/vim-toml-enhance'
+depends = ['cespare/vim-toml']
+
+# yaml syntax
+[[plugins]]
+repo = 'chase/vim-ansible-yaml'
+
+#============#
+# 非同期処理
+#============#
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
