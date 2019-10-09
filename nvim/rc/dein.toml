@@ -14,6 +14,13 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'osyo-manga/vim-precious'
 depends = ['Shougo/context_filetype.vim']
 
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+let g:indentLine_setColors = 0
+set list listchars=tab:\¦\ 
+'''
+
 #=============================#
 # ColorSchema - PowerlineShell( (hybird, hook)->lighttiger2505さん引用 )
 #=============================#
@@ -47,8 +54,8 @@ repo = 'vim-airline/vim-airline'
 depends = ['/vim-airline-themes']
 hook_add = '''
 let g:airline_powerline_fonts = 1
-    let g:airline_theme = 'badwolf'
-    let g:airline#extensions#virtualenv#enabled = 1
+let g:airline_theme = 'badwolf'
+let g:airline#extensions#virtualenv#enabled = 1
 '''
 
 #=============================#
@@ -62,11 +69,11 @@ hook_add = 'let g:nerdtree_tabs_open_console_startup = 0'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
-    nnoremap [figitive] <Nop>
-    nnoremap <Leader>g [figitive]
-    nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
-    nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
-    nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
+nnoremap [figitive] <Nop>
+nnoremap <Leader>g [figitive]
+nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
+nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
+nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
 '''
 
 [[plugins]]

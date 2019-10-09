@@ -3,8 +3,17 @@ repo = 'Shougo/deoplete.nvim'
 if = "has('nvim')"
 on_i = 1
 hook_source = '''
-    let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 '''
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_ft = ['ruby']
+
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_ft = ['ruby']
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'

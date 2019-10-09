@@ -22,7 +22,7 @@ set matchtime=1
 " ファイル名補完
 set wildmenu
 " wildmenu長さ設定
-set wildmode=list:longest
+set wildmode=full
 " 図の描写に便利
 set virtualedit+=block
 " 前行のインデント引き継ぎ
@@ -33,6 +33,8 @@ set tabstop=2
 set shiftwidth=2
 " インデント自動調整
 set smartindent
+" 行頭でtabするとshiftwidthの数indent
+set smarttab
 " error時のbell不要
 set noerrorbells
 
@@ -61,32 +63,3 @@ set ignorecase
 set smartcase 
 " 検索で末尾までいったら先頭に戻る
 set wrapscan 
-
-"============="
-" Command設定
-"============="
-" Escの2回押しでハイライト消去
-nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
-
-" jj,kkでNormalModeに
-inoremap <silent> jj <ESC>
-inoremap <silent> kk <ESC>
-
-" タブ間移動
-" 上下移動
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-" 左移動
-nnoremap sh <C-w>h
-" 右移動
-nnoremap sl <C-w>l
-" 順次移動
-nnoremap sw <C-w>w
-
-" vim起動時にNERDTreeコマンド実行
-augroup NERDTREE
-autocmd vimenter * NERDTree
-augroup END
-
-" filetree setting"
-let g:netrw_liststyle = 3

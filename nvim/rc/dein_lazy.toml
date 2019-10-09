@@ -31,10 +31,6 @@ depends = ['neomru.vim']
 [[plugins]]
 repo ='Shougo/neomru.vim'
 
-[[plugins]]
-repo = 'tpope/vim-markdown'
-on_ft = ['md']
-
 #=================#
 # 設定ファイル関連
 #=================#
@@ -43,14 +39,33 @@ on_ft = ['md']
 repo ='cespare/vim-toml'
 on_ft = ['toml']
 
-#[[plugins]]
-#repos = 'maralla/vim-toml-enhance'
-#depends = ['cespare/vim-toml']
-
 # yaml syntax
 [[plugins]]
 repo = 'chase/vim-ansible-yaml'
 
+#=================#
+# Markdown, Tex
+#=================#
+# syntax
+[[plugins]]
+repo ='plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = ['md']
+
+# previewできる
+[[plugins]]
+repo ='kannokanno/previm'
+
+# markdown browser
+[[plugins]]
+repo ='tyru/open-browser.vim'
+hook_add = 'let g:vim_markdown_math = 1'
+
+# tex
+[[plugins]]
+repo ='lervag/vimtex'
 #============#
 # 補完強化系
 #============#
@@ -73,10 +88,10 @@ build = 'make'
 #==========#
 # 便利機能
 #==========#
-#shift v で範囲選択 ctrl -(ハイフン）2回でコメントアウト
-[[plugins]]
-repo ='tomtom/tcomment_vim'
+# shift v で範囲選択 ctrl -(ハイフン）2回でコメントアウト
+#[[plugins]]
+#repo ='tomtom/tcomment_vim'
 
 # コメントアウト系
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
+#[[plugins]]
+#repo = 'scrooloose/nerdcommenter'

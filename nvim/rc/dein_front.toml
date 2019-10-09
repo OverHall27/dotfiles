@@ -13,3 +13,18 @@ on_ft = ['css']
 [[plugins]]
 repo = 'ap/vim-css-color'
 on_ft = ['css']
+
+[[plugins]]
+repo ='pangloss/vim-javascript'
+
+# vue-js
+[[plugins]]
+repo ='othree/yajs.vim'
+
+# js syntax
+[[plugins]]
+repo ='jelera/vim-javascript-syntax'
+
+[[plugins]] 
+repo ='posva/vim-vue'
+

@@ -1,0 +1,27 @@
+#=========#
+# C / C++ 
+#=========#
+# syntax
+[[plugins]]
+repo = 'justinmk/vim-syntax-extra'
+
+# highlight設定
+[[plugins]]
+repo ='octol/vim-cpp-enhanced-highlight'
+hook_add = 'let g:cpp_class_scope_highlight = 1'
+hook_add = 'let g:cpp_member_variable_highlight = 1'
+hook_add = 'let g:cpp_class_decl_heighligjt = 1'
+
+# 使いやすく
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+# コード補完
+[[plugins]]
+repo ='osyo-manga/vim-marching'
+
+# lint
+[[plugins]]
+repo = 'w0rp/ale'
+hook_source = 'let g:ale_lint_on_text_changed = "never" '
+hook_source = 'let g:ale_lint_on_enter = 0'
