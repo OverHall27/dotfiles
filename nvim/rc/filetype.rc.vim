@@ -15,7 +15,7 @@ augroup TabStep
 	autocmd BufNewFile,BufRead,BufEnter *.toml  set tabstop=2 shiftwidth=2
 	autocmd BufNewFile,BufRead,BufEnter *.vim   set tabstop=2 shiftwidth=2
 	autocmd BufNewFile,BufRead,BufEnter *.scss  set filetype=scss
-	autocmd BufNewFile,BufRead,BufEnter *.{md,mdwn,mkd,mkdn,mark} filetype=markdown
+	autocmd BufNewFile,BufRead,BufEnter *.{md,mdwn,mkd,mkdn,mark} set filetype=markdown
 augroup END
 
 augroup VimCheckTime
