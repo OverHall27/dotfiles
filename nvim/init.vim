@@ -1,4 +1,8 @@
 "Hello! Vim!!
+
+filetype off
+filetype plugin indent off
+
 function! s:source_rc(path, ...) abort "{{{
 	let use_global = get(a:000, 0, !has('vim_starting'))
 	let abspath = resolve(expand('~/.config/nvim/rc/' . a:path))
@@ -32,7 +36,6 @@ if !isdirectory(s:dein_repo_dir)
 endif
 " runtimepath設定
 execute 'set runtimepath+=' . s:dein_repo_dir
-"set runtimepath+=~/.
 
 call s:source_rc('dein.rc.vim')
 call s:source_rc('options.rc.vim')
@@ -40,5 +43,4 @@ call s:source_rc('filetype.rc.vim')
 call s:source_rc('command.rc.vim')
 
 " プラグインに対する設定反映
-filetype indent on
-syntax enable
+filetype plugin indent on

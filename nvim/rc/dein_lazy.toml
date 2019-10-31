@@ -95,3 +95,12 @@ build = 'make'
 # コメントアウト系
 #[[plugins]]
 #repo = 'scrooloose/nerdcommenter'
+
+# lint
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+let g:ale_lint_on_text_changed = "never"
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+'''

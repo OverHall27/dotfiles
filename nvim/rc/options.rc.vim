@@ -37,6 +37,8 @@ set smartindent
 set smarttab
 " error時のbell不要
 set noerrorbells
+" filetype常時表示
+set statusline=%y
 
 "=========="
 " file設定

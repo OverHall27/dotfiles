@@ -19,9 +19,3 @@ repo = 'vim-jp/cpp-vim'
 # コード補完
 [[plugins]]
 repo ='osyo-manga/vim-marching'
-
-# lint
-[[plugins]]
-repo = 'w0rp/ale'
-hook_source = 'let g:ale_lint_on_text_changed = "never" '
-hook_source = 'let g:ale_lint_on_enter = 0'

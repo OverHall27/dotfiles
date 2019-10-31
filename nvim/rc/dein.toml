@@ -9,17 +9,22 @@ repo = 'Shougo/dein.vim'
 #==========#
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
+hook_add = '''
+	if !exists('g:context_filetype#filetypes')
+		let g:context_filetype#filetypes = {}
+	endif
+'''
 
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['Shougo/context_filetype.vim']
 
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-let g:indentLine_setColors = 0
-set list listchars=tab:\¦\ 
-'''
+#[[plugins]]
+#repo = 'Yggdroot/indentLine'
+#hook_add = '''
+#let g:indentLine_setColors = 0
+#set list listchars=tab:\¦\ 
+#'''
 
 #=============================#
 # ColorSchema - PowerlineShell( (hybird, hook)->lighttiger2505さん引用 )
@@ -64,7 +69,9 @@ let g:airline#extensions#virtualenv#enabled = 1
 # nerdirtree表示
 [[plugins]]
 repo ='scrooloose/nerdtree'
-hook_add = 'let g:nerdtree_tabs_open_console_startup = 0'
+hook_add = '''
+let g:nerdtree_tabs_open_console_startup = 1
+'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
