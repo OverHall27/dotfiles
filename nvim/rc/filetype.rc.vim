@@ -14,8 +14,10 @@ augroup TabStep
 	autocmd BufNewFile,BufRead,BufEnter *.go    set tabstop=4 shiftwidth=4
 	autocmd BufNewFile,BufRead,BufEnter *.toml  set tabstop=2 shiftwidth=2
 	autocmd BufNewFile,BufRead,BufEnter *.vim   set tabstop=2 shiftwidth=2
+	autocmd BufNewFile,BufRead,BufEnter *.blade   set tabstop=4 shiftwidth=4
 	autocmd BufNewFile,BufRead,BufEnter *.scss  set filetype=scss
 	autocmd BufNewFile,BufRead,BufEnter *.{md,mdwn,mkd,mkdn,mark} set filetype=markdown
+	autocmd FileType php setlocal omnifunc=phpactor#Complete
 augroup END
 
 augroup VimCheckTime

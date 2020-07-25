@@ -26,6 +26,16 @@ depends = ['Shougo/context_filetype.vim']
 #set list listchars=tab:\¦\ 
 #'''
 
+#
+# PHP設定
+[[plugins]]
+repo = 'phpactor/phpactor'
+no_ft = ['php']
+build = 'composer install'
+
+[[plugins]]
+repo = 'jwalton512/vim-blade'
+
 #=============================#
 # ColorSchema - PowerlineShell( (hybird, hook)->lighttiger2505さん引用 )
 #=============================#
@@ -69,14 +79,22 @@ let g:airline#extensions#virtualenv#enabled = 1
 # nerdirtree表示
 [[plugins]]
 repo ='scrooloose/nerdtree'
-hook_add = '''
+hook_source = '''
 let g:nerdtree_tabs_open_console_startup = 1
+let NERDTreeShowHideen = 1
+let NERDTreeMapOpenInTab='<Enter>'
 '''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+hook_source = '''
+nnoremap <slient><C-n> :NERDTreeTabsToggle<CR>
+'''
+
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
-nnoremap [figitive] <Nop>
 nnoremap <Leader>g [figitive]
 nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
 nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
