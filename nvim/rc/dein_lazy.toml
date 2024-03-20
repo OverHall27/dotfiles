@@ -47,8 +47,8 @@ repo = 'chase/vim-ansible-yaml'
 # Markdown, Tex
 #=================#
 # syntax
-[[plugins]]
-repo ='plasticboy/vim-markdown'
+#[[plugins]]
+#repo ='plasticboy/vim-markdown'
 
 [[plugins]]
 repo = 'tpope/vim-markdown'

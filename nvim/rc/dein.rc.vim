@@ -1,5 +1,3 @@
-" よくわからん.おまじない
-" vimの互換動作的な感じ？もう必要ないという意見があるので，コメントアウトしておく
 if &compatible
 set nocompatible
 endif

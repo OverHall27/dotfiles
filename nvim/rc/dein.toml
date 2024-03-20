@@ -92,14 +92,14 @@ nnoremap <slient><C-n> :NERDTreeTabsToggle<CR>
 '''
 
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-hook_add = '''
-nnoremap <Leader>g [figitive]
-nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
-nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
-nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
-'''
+#[[plugins]]
+#repo = 'tpope/vim-fugitive'
+#hook_add = '''
+#nnoremap <Leader>g [figitive]
+#nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
+#nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
+#nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
+#'''
 
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
